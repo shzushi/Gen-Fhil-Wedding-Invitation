@@ -1,0 +1,678 @@
+/* =========================================================
+   GLOBAL RESPONSIVE FOUNDATION
+   Mobile / Tablet / Desktop
+========================================================= */
+
+
+/* =========================================================
+   TABLETS
+   768px+
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .card {
+        width: min(92%, 1200px);
+    }
+
+    .hero {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .countdown {
+        gap: 20px;
+    }
+
+    .add-to-calendar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rsvp .btn {
+        width: auto;
+        min-width: 250px;
+    }
+}
+
+
+/* =========================================================
+   LARGE TABLETS / SMALL LAPTOP
+   1024px+
+========================================================= */
+
+@media (min-width: 1024px) {
+
+    .card {
+        width: min(90%, 1200px);
+    }
+
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .story-theme-card {
+        gap: 50px;
+    }
+
+    .reminder-grid {
+        gap: 20px;
+    }
+}
+
+
+/* =========================================================
+   PHONES
+   767px AND BELOW
+========================================================= */
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .card {
+        width: calc(100% - 24px);
+        border-radius: 16px;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+        padding: 70px 14px 85px;
+    }
+
+    .names {
+        font-size: clamp(3.6rem, 18vw, 7rem);
+        margin-top: 10px;
+    }
+
+    .countdown {
+        width: 100%;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 4px;
+    }
+
+    .time-box {
+        padding: 8px 2px;
+    }
+
+    /* EVENT */
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .venue-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* GALLERY */
+
+    .gallery-caption {
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+
+    /* STORY */
+
+    .story-theme-card,
+    .story-theme-card.reverse {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .story-theme-card.reverse .story-img {
+        order: 0;
+    }
+
+    .story-theme-card.reverse .story-content {
+        order: 1;
+    }
+
+    .story-content p {
+        text-align: left;
+    }
+
+    /* DRESS CODE */
+
+    .wedding-colors {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        row-gap: 18px;
+    }
+
+    .dress-code-note-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+        padding-left: 0;
+    }
+
+    /* ENTOURAGE */
+
+    .grid-two-col {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .grid-three-col {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    /* REMINDERS */
+
+    .reminder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+
+    .footer-links {
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   480px AND BELOW
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .envelope-screen {
+        padding: 20px 10px;
+    }
+
+    .hero {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .names {
+        font-size: clamp(3.2rem, 19vw, 5rem);
+    }
+
+    .countdown {
+        gap: 2px;
+    }
+
+    .time-box span {
+        font-size: clamp(1.2rem, 8vw, 2rem);
+    }
+
+    .time-box small {
+        font-size: .5rem;
+        letter-spacing: .03em;
+    }
+
+    .card {
+        width: calc(100% - 16px);
+    }
+
+    .calendar-grid > div {
+        font-size: .62rem;
+    }
+
+    .venue-box {
+        padding: 16px 12px;
+    }
+
+    .slide-prev,
+    .slide-next {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        font-size: .8rem;
+    }
+
+    .wedding-colors {
+        gap: 8px;
+    }
+
+    .color-circle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .color-item p {
+        font-size: .55rem;
+    }
+
+    .entourage p {
+        font-size: .72rem;
+    }
+
+    .reminder-box {
+        padding: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   360px AND BELOW
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .card {
+        width: calc(100% - 10px);
+    }
+
+    .hero {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .names {
+        font-size: 3.1rem;
+    }
+
+    .wedding-of {
+        letter-spacing: .12em;
+    }
+
+    .countdown {
+        gap: 1px;
+    }
+
+    .time-box span {
+        font-size: 1.15rem;
+    }
+
+    .time-box small {
+        font-size: .45rem;
+    }
+
+    .calendar-grid > div {
+        font-size: .55rem;
+    }
+
+}
+
+/* =========================================================
+   SMALL iPHONES
+   iPhone SE / 375px and below
+========================================================= */
+
+@media screen and (max-width: 375px) {
+
+    .card {
+        width: calc(100% - 14px);
+    }
+
+    .hero {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .names {
+        font-size: 3.2rem;
+    }
+
+    .wedding-of {
+        font-size: 9px;
+        letter-spacing: .14em;
+    }
+
+    .countdown {
+        max-width: 350px;
+    }
+
+    .time-box span {
+        font-size: 1.25rem;
+    }
+
+    .time-box small {
+        font-size: 7px;
+    }
+
+    .calendar-grid > div {
+        font-size: 10px;
+    }
+
+    .film-frame {
+        width: 115px;
+        flex-basis: 115px;
+    }
+
+    .film-frame img {
+        width: 115px;
+        height: 150px;
+    }
+
+}
+
+
+/* =========================================================
+   iPHONE SE / VERY SMALL
+   320px and below
+========================================================= */
+
+@media screen and (max-width: 320px) {
+
+    .names {
+        font-size: 2.8rem;
+    }
+
+    .section {
+        font-size: 1.7rem;
+    }
+
+    .time-box span {
+        font-size: 1.05rem;
+    }
+
+    .time-box small {
+        font-size: 6px;
+    }
+
+    .film-frame {
+        width: 100px;
+        flex-basis: 100px;
+    }
+
+    .film-frame img {
+        width: 100px;
+        height: 135px;
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE iPHONE
+========================================================= */
+
+@media screen and (max-width: 932px) and (orientation: landscape) {
+
+    .envelope-screen,
+    .hero {
+        min-height: 100svh;
+        min-height: 100dvh;
+    }
+
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .names {
+        font-size: clamp(3rem, 12vh, 6rem);
+        margin: 10px 0 20px;
+    }
+
+    .countdown {
+        max-width: 500px;
+    }
+
+    .time-box span {
+        font-size: clamp(1.2rem, 6vh, 2.5rem);
+    }
+
+}
+
+/* =========================================
+   iPHONE 16 / SAFARI
+   393px × 852px portrait
+========================================= */
+
+@media only screen
+and (min-width: 390px)
+and (max-width: 400px)
+and (orientation: portrait) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        min-height: 100dvh;
+    }
+
+    /* Safe area for Dynamic Island */
+    .envelope-screen,
+    .hero {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    footer {
+        padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    }
+
+    /* Prevent sections from becoming wider than screen */
+    section,
+    .container,
+    .content {
+        max-width: 100%;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* =========================
+       ENVELOPE
+    ========================= */
+
+    .envelope-screen {
+        width: 100%;
+        min-height: 100svh;
+        min-height: 100dvh;
+        overflow: hidden;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+        width: 100%;
+        min-height: 100svh;
+        min-height: 100dvh;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero h1,
+    .hero .names {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
+
+    .countdown {
+        width: 100%;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+    /* =========================
+       EVENT DETAILS
+    ========================= */
+
+    .event-details,
+    .venue,
+    .rsvp,
+    .story,
+    .dress-code,
+    .timeline,
+    .entourage,
+    .reminder {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    /* =========================
+       CALENDAR
+    ========================= */
+
+    .calendar {
+        max-width: 360px;
+        width: calc(100% - 30px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* =========================
+       RSVP INPUTS
+    ========================= */
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 16px;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .gallery img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* =========================
+       SLIDESHOW
+    ========================= */
+
+    .slideshow,
+    .slide {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* =========================
+       VIDEO
+    ========================= */
+
+    .video-section,
+    .video-container {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    video,
+    iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* =========================
+       STORY
+    ========================= */
+
+    .story-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* =========================
+       TIMELINE
+    ========================= */
+
+    .timeline {
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       MODALS
+    ========================= */
+
+    .modal,
+    .zoom-modal {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* =========================
+       TOUCH TARGETS
+    ========================= */
+
+    button,
+    a,
+    .clickable {
+        min-height: 44px;
+    }
+}
+
+
+/* =========================================
+   iPHONE 16 LANDSCAPE
+========================================= */
+
+@media only screen
+and (min-width: 800px)
+and (max-height: 450px)
+and (orientation: landscape) {
+
+    .hero,
+    .envelope-screen {
+        min-height: 100svh;
+        min-height: 100dvh;
+    }
+
+    .hero {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .countdown {
+        transform: scale(0.85);
+    }
+}

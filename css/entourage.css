@@ -1,0 +1,444 @@
+/* =========================================
+   ENTOURAGE
+   ELEGANT WEDDING PROGRAM STYLE
+========================================= */
+
+.entourage {
+    position: relative;
+    overflow: hidden;
+
+    padding: 4rem 3rem;
+
+    background: #fdf9f2;
+
+    border: 1px solid rgba(122, 143, 110, 0.22);
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.06),
+        0 0 35px rgba(122, 143, 110, 0.06);
+}
+
+
+/* =========================================
+   SUBTLE BOTANICAL CORNERS
+========================================= */
+
+.entourage::before,
+.entourage::after {
+    content: "❦";
+
+    position: absolute;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+
+    color: rgba(122, 143, 110, 0.10);
+
+    pointer-events: none;
+}
+
+.entourage::before {
+    top: 10px;
+    left: 25px;
+
+    transform: rotate(-20deg);
+}
+
+.entourage::after {
+    bottom: 10px;
+    right: 25px;
+
+    transform: rotate(160deg);
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.entourage > h3:first-child {
+    margin: 0 0 2.5rem;
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--sage-dark);
+
+    position: relative;
+    z-index: 2;
+}
+
+.entourage > h3:first-child::after {
+    content: "✦";
+
+    display: block;
+
+    margin-top: .35rem;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+
+    color: #bc6c25;
+}
+
+
+/* =========================================
+   GROUP HEADINGS
+========================================= */
+
+.entourage h3:not(:first-child) {
+    margin: 3.5rem 0 2rem;
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--sage-dark);
+
+    color: #7a8f6e;
+}
+
+.entourage h3:not(:first-child)::before {
+    margin-right: 12px;
+}
+
+.entourage h3:not(:first-child)::after {
+    margin-left: 12px;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.entourage .divider {
+    width: 100%;
+    max-width: 280px;
+
+    height: 1px;
+
+    margin: -1rem auto 2rem;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(188, 108, 37, 0.45),
+            transparent
+        );
+
+    position: relative;
+}
+
+.entourage .divider::after {
+    content: "◆";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    padding: 0 10px;
+
+    background: #fdf9f2;
+
+    color: #bc6c25;
+
+    font-size: .45rem;
+}
+
+
+/* =========================================
+   TWO COLUMN GROUP
+========================================= */
+
+.entourage .grid-two-col {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    gap: 0;
+
+    position: relative;
+}
+
+/* =========================================
+   THREE COLUMN GROUP
+========================================= */
+
+.flower-security {
+    text-align: center;
+}
+
+.grid-three-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* =========================================
+   COLUMN CONTENT
+========================================= */
+
+.entourage .grid-two-col > div {
+    padding: 1.5rem 2rem;
+
+    text-align: center;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    box-shadow: none;
+
+    transition: none;
+
+    position: relative;
+}
+
+
+/* =========================================
+   VERTICAL LINE
+========================================= */
+
+.entourage .grid-two-col > div:first-child::after {
+    content: "";
+
+    position: absolute;
+
+    top: 15%;
+    right: 0;
+
+    width: 1px;
+    height: 70%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(122, 143, 110, 0.25),
+            transparent
+        );
+}
+
+
+/* =========================================
+   ROLE TITLES
+========================================= */
+
+.entourage h4 {
+    margin: 0 0 .7rem;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.45rem;
+    font-weight: 600;
+
+    color: #bc6c25;
+
+    letter-spacing: .03em;
+}
+
+.entourage h4 u {
+    text-decoration: none;
+}
+
+
+/* Small decorative line underneath role */
+
+.entourage h4::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    margin: .45rem auto .8rem;
+
+    background: rgba(188, 108, 37, 0.45);
+}
+
+
+/* =========================================
+   NAMES
+========================================= */
+
+.entourage p {
+    margin: .3rem 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: .92rem;
+
+    line-height: 1.8;
+
+    color: #555;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   SPECIAL EMPHASIS
+   PARENTS
+========================================= */
+
+.entourage > .grid-two-col:first-of-type {
+    margin-bottom: 1rem;
+}
+
+.entourage > .grid-two-col:first-of-type h4 {
+    font-size: 1.5rem;
+}
+
+
+/* =========================================
+   BEST MAN / MAID OF HONOR
+========================================= */
+
+.entourage > .grid-two-col:nth-of-type(2) {
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================
+   SINGLE COLUMN GROUPS
+========================================= */
+
+.entourage .grid-two-col > div:only-child {
+    grid-column: 1 / -1;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    width: 100%;
+}
+
+.entourage .grid-two-col > div:only-child::after {
+    display: none;
+}
+
+
+/* =========================================
+   FLOWER GIRLS
+========================================= */
+
+.entourage .grid-two-col > div .grid-two-col {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 3rem;
+
+    margin-top: .5rem;
+}
+
+.entourage .grid-two-col > div .grid-two-col > div {
+    padding: 0;
+}
+
+
+/* =========================================
+   SECTION SPACING
+========================================= */
+
+.entourage > h3:not(:first-child) + .grid-two-col {
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .entourage {
+        padding: 3rem 1.25rem;
+
+        border-radius: 22px;
+    }
+
+    .entourage > h3:first-child {
+        font-size: 3rem;
+    }
+
+    .entourage h3:not(:first-child) {
+        font-size: 2.25rem;
+
+        margin-top: 3rem;
+    }
+
+    .entourage .grid-two-col {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .entourage .grid-two-col > div {
+        padding: 1.2rem 1rem;
+    }
+
+    /* Remove vertical divider */
+    .entourage .grid-two-col > div:first-child::after {
+        display: none;
+    }
+
+    /* Add horizontal divider instead */
+    .entourage .grid-two-col > div:first-child::before {
+        content: "";
+
+        position: absolute;
+
+        left: 25%;
+        right: 25%;
+        bottom: 0;
+
+        height: 1px;
+
+        background:
+            linear-gradient(
+                to right,
+                transparent,
+                rgba(122, 143, 110, 0.25),
+                transparent
+            );
+    }
+
+    .entourage .grid-two-col > div:only-child::before {
+        display: none;
+    }
+
+    .entourage h4 {
+        font-size: 1.3rem;
+    }
+
+    .entourage p {
+        font-size: .88rem;
+    }
+
+    .entourage .grid-two-col > div .grid-two-col {
+        display: block;
+    }
+
+    .entourage .grid-two-col > div .grid-two-col > div {
+        padding: 0;
+    }
+}
