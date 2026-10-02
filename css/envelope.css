@@ -202,30 +202,31 @@
            ENVELOPE
         ========================================= */
 
-        .envelope {
-            position: relative;
+.envelope {
+    position: relative;
 
-            width: 390px;
-            height: 250px;
+    width: min(390px, 90vw);
+    aspect-ratio: 390 / 250;
+    height: auto;
 
-            margin: auto;
+    margin: auto;
 
-            cursor: pointer;
+    cursor: pointer;
 
-            perspective: 1000px;
+    perspective: 1000px;
 
-            filter:
-                drop-shadow(
-                    0 25px 30px
-                    rgba(0,0,0,.25)
-                );
+    filter:
+        drop-shadow(
+            0 25px 30px
+            rgba(0,0,0,.25)
+        );
 
-            animation:
-                floatingEnvelope
-                4s
-                ease-in-out
-                infinite;
-        }
+    animation:
+        floatingEnvelope
+        4s
+        ease-in-out
+        infinite;
+}
 
 
 .envelope-body {

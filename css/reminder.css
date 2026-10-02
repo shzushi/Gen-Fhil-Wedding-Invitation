@@ -167,31 +167,3 @@
     background:
         rgba(188, 108, 37, 0.08);
 }
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-
-    .reminder {
-        padding: 2rem 1.25rem;
-    }
-
-    .reminder-intro {
-        font-size: 1.05rem;
-    }
-
-    .reminder-box {
-        padding: 1.4rem;
-    }
-
-    .reminder-box h3 {
-        font-size: 1.3rem;
-    }
-
-    .reminder-footer {
-        font-size: 1.1rem;
-    }
-}
