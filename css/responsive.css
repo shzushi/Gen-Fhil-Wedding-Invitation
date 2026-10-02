@@ -6225,3 +6225,730 @@ img {
     }
 
 }
+
+
+/* =========================================================
+   FINAL MOBILE POLISH
+   Target: iPhone 16 / 393px and modern Android phones
+   This block intentionally comes LAST so it wins over the
+   older overlapping responsive rules above.
+========================================================= */
+
+@media (max-width: 767px) {
+
+    /* -----------------------------------------------------
+       GLOBAL MOBILE WIDTH
+    ----------------------------------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    section,
+    main,
+    article {
+        min-width: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       SCROLL CUE
+       It was competing with the countdown near the bottom
+       of the opening screen. Phones do not need a fixed cue.
+    ----------------------------------------------------- */
+
+    .scroll-cue {
+        display: none !important;
+    }
+
+
+    /* -----------------------------------------------------
+       ENVELOPE
+       Make the envelope photos noticeably larger.
+    ----------------------------------------------------- */
+
+    .envelope-content {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .envelope {
+        width: min(90vw, 355px);
+        max-width: 355px;
+    }
+
+    .envelope-photo {
+        width: 132px !important;
+        height: 174px !important;
+        padding: 4px;
+    }
+
+    .envelope.open .photo-left {
+        transform:
+            translate(-50%, -50%)
+            translate(-88px, -94px)
+            rotate(-16deg)
+            scale(1) !important;
+    }
+
+    .envelope.open .photo-right {
+        transform:
+            translate(-50%, -50%)
+            translate(88px, -94px)
+            rotate(16deg)
+            scale(1) !important;
+    }
+
+
+    /* -----------------------------------------------------
+       COUNTDOWN
+       Keep the four counters readable instead of squeezed.
+    ----------------------------------------------------- */
+
+    .countdown {
+        width: min(94vw, 390px);
+        max-width: 390px;
+        gap: 7px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .time-box {
+        min-width: 0 !important;
+        width: 100%;
+        padding: .7rem .35rem !important;
+    }
+
+    .time-box span {
+        font-size: clamp(1.25rem, 6.5vw, 1.55rem);
+        line-height: 1;
+    }
+
+    .time-box small {
+        font-size: clamp(.48rem, 2.1vw, .6rem);
+        letter-spacing: .05em;
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------------------
+       EVENTS + CALENDAR
+       Give the whole section more usable horizontal space.
+    ----------------------------------------------------- */
+
+    .event-grid {
+        width: calc(100vw - 24px) !important;
+        max-width: none !important;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    .calendar-container,
+    .venue-container {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0;
+    }
+
+    .calendar,
+    .venue-box {
+        width: 100% !important;
+        max-width: none !important;
+        box-sizing: border-box;
+    }
+
+    .calendar {
+        padding: 1.25rem .9rem !important;
+        border-radius: 18px;
+    }
+
+    .calendar-header {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+        line-height: 1.2;
+        margin-bottom: .9rem;
+    }
+
+    .calendar-grid {
+        width: 100%;
+        gap: .3rem !important;
+    }
+
+    .calendar-grid div {
+        min-height: 44px !important;
+        padding: .45rem .1rem !important;
+        font-size: .9rem !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .calendar-grid div:nth-child(-n+7) {
+        min-height: auto !important;
+        padding: .2rem 0 !important;
+        font-size: .67rem !important;
+    }
+
+    .special-day {
+        min-height: 44px !important;
+        font-size: .9rem !important;
+    }
+
+    .venue-box {
+        padding: 1.25rem 1rem !important;
+    }
+
+    .venue-title,
+    .venue-sub {
+        max-width: 100%;
+        text-align: center;
+    }
+
+
+    /* -----------------------------------------------------
+       TITLES
+       Prevent headings from becoming narrow/squeezed.
+    ----------------------------------------------------- */
+
+    .stories-title,
+    #gallery-txt,
+    #video-title,
+    .calendar-header,
+    .venue-title,
+    .dress-code-title,
+    .dress-code-script,
+    .timeline-title,
+    .entourage > h3:first-child,
+    .entourage h3:not(:first-child) {
+        width: 100%;
+        max-width: 100% !important;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+    }
+
+    .stories-title,
+    #gallery-txt,
+    #video-title {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       SLIDESHOW
+       Make the photo area taller and nearly full-width.
+    ----------------------------------------------------- */
+
+    .slideshow-container {
+        width: calc(100vw - 24px) !important;
+        max-width: none !important;
+        margin-left: 50%;
+        margin-right: 0;
+        transform: translateX(-50%);
+        aspect-ratio: 4 / 3 !important;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .slide,
+    .slide img {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+    }
+
+    .slide img {
+        display: block;
+        object-fit: cover;
+    }
+
+    .slide-prev,
+    .slide-next {
+        width: 36px !important;
+        height: 36px !important;
+        z-index: 10;
+    }
+
+    .slide-prev {
+        left: 8px !important;
+    }
+
+    .slide-next {
+        right: 8px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       OUR STORY
+       Force the section to remain visible and give its
+       images enough height on phones.
+    ----------------------------------------------------- */
+
+    .story-theme {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 3rem 1rem !important;
+        overflow: visible;
+    }
+
+    .story-theme-grid {
+        display: block !important;
+        visibility: visible !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .story-theme-card,
+    .story-theme-card.reverse {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        flex-direction: column !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        gap: 1.25rem;
+        margin-bottom: 3rem;
+        direction: ltr !important;
+    }
+
+    .story-img {
+        display: block !important;
+        width: 100%;
+        max-width: 100%;
+        min-height: 240px;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        border-radius: 18px;
+    }
+
+    .story-img img {
+        display: block !important;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+    }
+
+    .story-content {
+        display: block !important;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 .25rem;
+        text-align: center;
+    }
+
+    .story-content h3 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(1.5rem, 7vw, 1.85rem);
+        line-height: 1.25;
+        margin-bottom: .7rem;
+    }
+
+    .story-content p {
+        width: 100%;
+        max-width: 100%;
+        font-size: .86rem;
+        line-height: 1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       GALLERY
+       Smaller moving frames so more of each image is visible
+       at once instead of filling the whole phone.
+    ----------------------------------------------------- */
+
+    .gallery-marquee {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        padding: 6px 0;
+    }
+
+    .gallery-track {
+        width: max-content;
+        max-width: none;
+        gap: 5px !important;
+    }
+
+    .gallery-track img {
+        width: 145px !important;
+        height: 120px !important;
+        border-radius: 7px;
+        object-fit: cover;
+    }
+
+    .film-frame {
+        width: 145px !important;
+        height: 138px !important;
+        padding: 13px 5px !important;
+        flex: 0 0 auto;
+    }
+
+    #gallery-txt {
+        font-size: clamp(2rem, 9vw, 2.5rem);
+        line-height: 1.15;
+    }
+
+    .gallery-caption {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 .75rem;
+        font-size: .82rem;
+        line-height: 1.7;
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------------------
+       VIDEO
+       Full usable phone width + taller viewing area.
+    ----------------------------------------------------- */
+
+    .video {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    #video-title {
+        font-size: clamp(2rem, 9vw, 2.5rem);
+        line-height: 1.2;
+    }
+
+    .video-caption {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 .75rem;
+        font-size: .82rem;
+        line-height: 1.7;
+        box-sizing: border-box;
+    }
+
+    .video-container {
+        width: calc(100vw - 24px) !important;
+        max-width: none !important;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        aspect-ratio: 16 / 10 !important;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .wedding-video {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none;
+        object-fit: contain;
+        border-radius: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       Keep contact/credit in normal flow and reserve enough
+       space so it can never sit on top of the main footer.
+    ----------------------------------------------------- */
+
+    .wedding-footer {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding:
+            2.75rem
+            1rem
+            2rem !important;
+        overflow: hidden;
+    }
+
+    .footer-names,
+    .footer-caption,
+    .footer-copy {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .footer-contact {
+        position: static !important;
+        inset: auto !important;
+        width: 100% !important;
+        max-width: 100%;
+        margin: 1.5rem auto 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: .55rem !important;
+        text-align: center;
+        transform: none !important;
+    }
+
+    .footer-credit,
+    .footer-links {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: .55rem .8rem !important;
+    }
+
+    .footer-links a {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   iPHONE 16 / MODERN PHONE TUNING
+   391px - 430px
+========================================================= */
+
+@media (min-width: 391px) and (max-width: 430px) {
+
+    .envelope-photo {
+        width: 136px !important;
+        height: 178px !important;
+    }
+
+    .envelope.open .photo-left {
+        transform:
+            translate(-50%, -50%)
+            translate(-91px, -96px)
+            rotate(-16deg)
+            scale(1) !important;
+    }
+
+    .envelope.open .photo-right {
+        transform:
+            translate(-50%, -50%)
+            translate(91px, -96px)
+            rotate(16deg)
+            scale(1) !important;
+    }
+
+    .event-grid {
+        width: calc(100vw - 20px) !important;
+    }
+
+    .calendar {
+        padding: 1.3rem .95rem !important;
+    }
+
+    .calendar-grid div,
+    .special-day {
+        min-height: 45px !important;
+    }
+
+    .slideshow-container {
+        width: calc(100vw - 20px) !important;
+        aspect-ratio: 4 / 3 !important;
+    }
+
+    .gallery-track img {
+        width: 145px !important;
+        height: 120px !important;
+    }
+
+    .film-frame {
+        width: 145px !important;
+        height: 138px !important;
+    }
+
+    .video-container {
+        width: calc(100vw - 20px) !important;
+        aspect-ratio: 16 / 10 !important;
+    }
+
+    .story-img {
+        min-height: 245px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   390px and below
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .envelope-photo {
+        width: 116px !important;
+        height: 152px !important;
+    }
+
+    .envelope.open .photo-left {
+        transform:
+            translate(-50%, -50%)
+            translate(-78px, -88px)
+            rotate(-15deg)
+            scale(1) !important;
+    }
+
+    .envelope.open .photo-right {
+        transform:
+            translate(-50%, -50%)
+            translate(78px, -88px)
+            rotate(15deg)
+            scale(1) !important;
+    }
+
+    .event-grid {
+        width: calc(100vw - 16px) !important;
+    }
+
+    .calendar-grid div,
+    .special-day {
+        min-height: 41px !important;
+        font-size: .82rem !important;
+    }
+
+    .slideshow-container {
+        width: calc(100vw - 16px) !important;
+        aspect-ratio: 4 / 3 !important;
+    }
+
+    .gallery-track img {
+        width: 135px !important;
+        height: 112px !important;
+    }
+
+    .film-frame {
+        width: 135px !important;
+        height: 128px !important;
+    }
+
+    .video-container {
+        width: calc(100vw - 16px) !important;
+        aspect-ratio: 16 / 10 !important;
+    }
+
+    .story-theme {
+        padding-left: .75rem !important;
+        padding-right: .75rem !important;
+    }
+
+    .story-img {
+        min-height: 220px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .envelope-photo {
+        width: 102px !important;
+        height: 132px !important;
+    }
+
+    .envelope.open .photo-left {
+        transform:
+            translate(-50%, -50%)
+            translate(-67px, -76px)
+            rotate(-14deg)
+            scale(1) !important;
+    }
+
+    .envelope.open .photo-right {
+        transform:
+            translate(-50%, -50%)
+            translate(67px, -76px)
+            rotate(14deg)
+            scale(1) !important;
+    }
+
+    .calendar-grid div,
+    .special-day {
+        min-height: 37px !important;
+        font-size: .74rem !important;
+    }
+
+    .gallery-track img {
+        width: 120px !important;
+        height: 100px !important;
+    }
+
+    .film-frame {
+        width: 120px !important;
+        height: 114px !important;
+    }
+
+    .story-img {
+        min-height: 195px;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONES
+========================================================= */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .scroll-cue {
+        display: none !important;
+    }
+
+    .slideshow-container,
+    .video-container {
+        width: min(92vw, 850px) !important;
+        margin-left: auto;
+        transform: none;
+    }
+
+    .slideshow-container {
+        aspect-ratio: 16 / 9 !important;
+    }
+
+    .video-container {
+        aspect-ratio: 16 / 9 !important;
+    }
+
+    .story-img {
+        min-height: 180px;
+    }
+
+    .footer-contact {
+        position: static !important;
+        inset: auto !important;
+        transform: none !important;
+        margin-top: 1rem !important;
+    }
+}
