@@ -1,0 +1,446 @@
+/* =========================================
+   EVENT DETAILS GRID
+========================================= */
+
+.event-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-items: stretch;
+}
+
+@media (min-width: 768px) {
+    .event-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.5rem;
+        align-items: start;
+    }
+}
+
+
+/* =========================================
+   EVENT SUBHEADINGS
+========================================= */
+
+.subheading {
+    width: 100%;
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    line-height: 1.2;
+
+    color: var(--burnt-orange);
+
+    margin: 0 0 1rem;
+}
+
+
+/* =========================================
+   CALENDAR CONTAINER
+========================================= */
+
+.calendar-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   CALENDAR CARD
+========================================= */
+
+.calendar {
+    width: 100%;
+
+    background: var(--paper);
+
+    border-radius: 22px;
+    border: 1px solid rgba(188, 108, 37, .16);
+
+    padding: 1.7rem 1.8rem;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .06);
+}
+
+
+/* =========================================
+   CALENDAR HEADER
+========================================= */
+
+.calendar-header {
+    margin: 0 0 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.15rem;
+    line-height: 1.5;
+	font-style: italic;
+    color: var(--sage-dark);
+    text-align: center;
+}
+
+
+/* =========================================
+   CALENDAR GRID
+========================================= */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+
+    width: 100%;
+
+    gap: .6rem;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================
+   CALENDAR CELLS
+========================================= */
+
+.calendar-grid div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: .55rem .2rem;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+
+    font-size: 1rem;
+
+    color: var(--text);
+
+    background: rgba(188, 108, 37, .035);
+
+    border: 1px solid rgba(188, 108, 37, .05);
+}
+
+
+/* =========================================
+   DAY NAMES
+========================================= */
+
+.calendar-grid div:nth-child(-n+7) {
+    min-height: auto;
+
+    padding: .2rem 0;
+
+    background: none;
+    border: none;
+
+    font-size: .8rem;
+    font-weight: 600;
+
+    color: var(--burnt-orange);
+}
+
+
+/* =========================================
+   SPECIAL DAY
+========================================= */
+
+.special-day {
+    min-height: 44px;
+    padding: .55rem .2rem;
+
+    border-radius: 12px;
+    border: 1px solid rgba(188, 108, 37, .55);
+
+    background: var(--paper);
+    color: var(--burnt-orange);
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    box-shadow: 0 3px 10px rgba(188, 108, 37, .12);
+
+    animation: calendarPulse 2s ease-in-out infinite;
+}
+
+/* =========================================
+   CALENDAR PULSE
+========================================= */
+
+@keyframes calendarPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(188, 108, 37, 0.6);
+    }
+
+    50% {
+        transform: scale(1.15);
+        box-shadow: 0 0 20px 8px rgba(188, 108, 37, 0.35);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(188, 108, 37, 0);
+    }
+}
+
+
+/* =========================================
+   CALENDAR FOOTER
+========================================= */
+
+.calendar-footer {
+    position: relative;
+
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+
+    color: var(--sage-dark);
+
+    text-align: center;
+}
+
+.calendar-footer::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+
+    background: rgba(188, 108, 37, .18);
+}
+
+
+/* =========================================
+   VENUE CONTAINER
+========================================= */
+
+.venue-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    width: 100%;
+    max-width: 420px;
+
+    margin: 0 auto;
+
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   VENUE BOX
+========================================= */
+
+.venue-box {
+    width: 100%;
+
+    background: var(--paper);
+
+    border: 1px solid rgba(188, 108, 37, .15);
+    border-radius: 20px;
+
+    padding: 1.4rem 1.5rem;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .06);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.venue-box + .venue-box {
+    margin-top: 1.25rem;
+}
+
+
+.venue-box:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, .09);
+}
+
+
+/* =========================================
+   VENUE ICON
+========================================= */
+
+.venue-icon {
+    display: block;
+
+    margin: 0 0 .4rem;
+
+    font-size: 2rem;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   VENUE TITLE
+========================================= */
+
+.venue-title {
+    margin: 0 0 .25rem;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.35rem;
+    line-height: 1.2;
+
+    color: var(--sage-dark);
+}
+
+
+/* =========================================
+   VENUE SUBTITLE
+========================================= */
+
+.venue-sub {
+    margin: 0 0 .3rem;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: .85rem;
+    line-height: 1.5;
+
+    color: var(--text);
+}
+
+
+/* =========================================
+   MAP BUTTON
+========================================= */
+
+.btn-map {
+    display: inline-block;
+
+    margin-top: .5rem;
+
+    padding: .45rem 1rem;
+
+    border-radius: 999px;
+
+    background: var(--burnt-orange);
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: .8rem;
+
+    transition:
+        background .3s ease,
+        transform .2s ease;
+}
+
+
+.btn-map:hover {
+    background: var(--burnt-dark);
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ADD TO CALENDAR
+========================================= */
+
+.add-to-calendar {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-top: 12px;
+}
+
+
+.cal-btn {
+    padding: 6px 13px;
+
+    border-radius: 999px;
+
+    border: 1px solid var(--burnt-orange);
+
+    background: transparent;
+    color: var(--burnt-orange);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .2s ease;
+}
+
+
+.cal-btn:hover {
+    background: var(--burnt-orange);
+    color: white;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .calendar-container {
+        max-width: 100%;
+    }
+
+    .calendar {
+        padding: 1.4rem 1rem;
+    }
+
+    .calendar-grid {
+        gap: .4rem;
+    }
+
+    .calendar-grid div {
+        min-height: 40px;
+        font-size: .9rem;
+    }
+
+    .special-day {
+        min-height: 40px;
+        font-size: .9rem;
+    }
+}
